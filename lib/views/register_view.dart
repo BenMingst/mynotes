@@ -73,6 +73,14 @@ class _RegisterViewState extends State<RegisterView> {
             },
             child: const Text('Register'),
           ),
+          TextButton(
+              onPressed: () async {
+                Navigator.of(context).pushNamedAndRemoveUntil(
+                  '/login/',
+                  (route) => false,
+                );
+              },
+              child: const Text('Back to login'))
         ],
       ),
     );
